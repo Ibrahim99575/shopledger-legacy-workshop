@@ -51,15 +51,14 @@ test('stock check rejects unknown products and accepts an empty cart', () => {
   assert.deepEqual(inventory.check([product()], []), { ok: true });
 });
 
-test('CURRENT BEHAVIOUR: stock check rejects the exact remaining sellable quantity', () => {
+test('stock check accepts the exact remaining sellable quantity', () => {
   const result = inventory.check([product()], [{ id: 1, qty: 7 }]);
-  assert.equal(result.ok, false);
-  assert.match(result.msg, /7 sellable available/);
+  assert.deepEqual(result, { ok: true });
 });
 
-test('CURRENT BEHAVIOUR: stock check rejects the last unreserved unit', () => {
+test('stock check accepts the last unreserved unit', () => {
   const result = inventory.check([product({ stock: 1, reserved: 0 })], [{ id: 1, qty: 1 }]);
-  assert.equal(result.ok, false);
+  assert.equal(result.ok, true);
 });
 
 test('reserve deducts physical stock and preserves wholesale reserved holds', () => {
@@ -77,10 +76,10 @@ test('reserve handles numeric quantity strings and ignores missing products', ()
   assert.equal(p.reserved, 3);
 });
 
-test('CURRENT BEHAVIOUR: release ignores order lines identified by id', () => {
+test('release restores physical stock for order lines identified by id', () => {
   const p = product({ stock: 8 });
   inventory.release([p], [{ id: 1, qty: 2 }]);
-  assert.equal(p.stock, 8);
+  assert.equal(p.stock, 10);
   assert.equal(p.reserved, 3);
 });
 

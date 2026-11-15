@@ -22,10 +22,10 @@ test('cancellation updates status, reason, and date and returns the same order',
   assert.match(result.order.cancelledAt, /^\d{2}\/\d{2}\/\d{4}$/);
 });
 
-test('CURRENT BEHAVIOUR: cancelling a pending order does not restore physical stock', () => {
+test('cancelling a pending order restores physical stock and preserves holds', () => {
   const db = fixture();
   orders.cancel(db, 1007, 'Fixture cancellation');
-  assert.equal(db.products[0].stock, 8);
+  assert.equal(db.products[0].stock, 10);
   assert.equal(db.products[0].reserved, 3);
 });
 
