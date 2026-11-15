@@ -63,6 +63,10 @@ Review method: inspected the full diff and all callers, checked boundary and err
 cases, ran the regression suite, and reproduced the selected ticket through the UI.
 This is a documented manual review, not a claim that the `/review` command ran.
 
+The `@codex review` request on PR #8 received an account/integration setup notice
+instead of a code review. The workshop explicitly allows the manual review as a
+fallback, so no automated review success is claimed.
+
 Findings for this diff: **no blocking findings**.
 
 - `orders.cancel()` is the only application caller of `inventory.release()` and
