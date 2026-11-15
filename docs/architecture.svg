@@ -107,7 +107,7 @@
 <rect x="1202" y="1176" width="548" height="112" rx="10" fill="#eef6f2" stroke="#c6d2dc" stroke-width="2"/>
 <text x="1220" y="1208" class="name">6. store.appendAudit + write</text>
 <text x="1220" y="1236" class="small">Persist JSON; return 201 to the UI</text>
-<path class="flow" d="M1476 1142 L1476 1167"/>
+<path class="flow" d="M1476 1142 L1476 1158 L324 1158 L324 1175"/>
 <text x="50" y="1346" class="body">Cancellation: routes/orders.js -&gt; orders.cancel -&gt; inventory.release; khata debit reversal remains in ledger.</text>
 <text x="50" y="1380" class="small">Arrows show browser dispatch, persistence, and the numbered checkout flow. Module descriptions identify other dependencies.</text>
 </svg>

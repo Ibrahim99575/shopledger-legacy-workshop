@@ -1,7 +1,7 @@
 # CP1: Read-only codebase analysis
 
-Project folder: `shopledger-legacy-workshop`  
-Mode: **read-only**  
+Project folder: `shopledger-legacy-workshop`
+Mode: **read-only**
 Selected assignment: Ticket 2, inventory availability and cancellation restoration.
 
 This records the source inspection completed before creating the checkpoint files,

@@ -40,9 +40,9 @@
 test at test\inventory.regression.test.js:6:1
 ✖ REGRESSION: sell the last unreserved unit and reach zero physical stock (2.6822ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   false !== true
-  
+
       at TestContext.<anonymous> (D:\Project\geeksforgeeks-contest\shopledger-legacy-workshop\test\inventory.regression.test.js:9:10)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1402:25)
@@ -59,9 +59,9 @@ test at test\inventory.regression.test.js:6:1
 test at test\inventory.regression.test.js:15:1
 ✖ REGRESSION: sell the last sellable unit without consuming three wholesale holds (0.2649ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   false !== true
-  
+
       at TestContext.<anonymous> (D:\Project\geeksforgeeks-contest\shopledger-legacy-workshop\test\inventory.regression.test.js:18:10)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1402:25)
@@ -80,9 +80,9 @@ test at test\inventory.regression.test.js:15:1
 test at test\inventory.regression.test.js:26:1
 ✖ REGRESSION: buying all sellable stock still rejects any quantity above it (0.18ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   false !== true
-  
+
       at TestContext.<anonymous> (D:\Project\geeksforgeeks-contest\shopledger-legacy-workshop\test\inventory.regression.test.js:28:10)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1402:25)
@@ -102,7 +102,7 @@ test at test\inventory.regression.test.js:32:1
 ✖ REGRESSION: cancelling pending order restores every line once and preserves holds (1.9299ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
   + actual - expected
-  
+
     [
       {
         id: 6,
@@ -117,7 +117,7 @@ test at test\inventory.regression.test.js:32:1
   -     stock: 24
       }
     ]
-  
+
       at TestContext.<anonymous> (D:\Project\geeksforgeeks-contest\shopledger-legacy-workshop\test\inventory.regression.test.js:40:10)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1402:25)
@@ -137,14 +137,14 @@ test at test\inventory.regression.test.js:48:1
 ✖ REGRESSION: reserve and release round trip physical stock and wholesale holds (0.3445ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
   + actual - expected
-  
+
     {
       id: 1,
       reserved: 3,
   +   stock: 8
   -   stock: 10
     }
-  
+
       at TestContext.<anonymous> (D:\Project\geeksforgeeks-contest\shopledger-legacy-workshop\test\inventory.regression.test.js:54:10)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1402:25)
@@ -163,9 +163,9 @@ test at test\inventory.regression.test.js:48:1
 test at test\inventory.regression.test.js:57:1
 ✖ REGRESSION: release adds numeric quantities to physical stock, never concatenates (0.2375ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   '8' !== 10
-  
+
       at TestContext.<anonymous> (D:\Project\geeksforgeeks-contest\shopledger-legacy-workshop\test\inventory.regression.test.js:60:10)
       at Test.runInAsyncScope (node:async_hooks:227:14)
       at Test.run (node:internal/test_runner/test:1402:25)
